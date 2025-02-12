@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+}
+
+/* header section css :start */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 2px 2px #ccc;
+    z-index: 1;
+}
+.pc-header {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 2px 2px #ccc;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 130px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
+header i {
+    font-size: 20px;
+    color: black;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    background-color: rgba(4, 9, 30, 0.5);
+    display: none;
+}
+
+.showOverlay {
+    display: block;
+}
+
+.menu-slider {
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 15px;
+    position: fixed;
+    top: 0px;
+    left: -50%;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.menu-sliderL {
+    display: none;
+}
+
+.show-menu-slider {
+    left: 0%;
+}
+
+.blog {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+.stop-scroll {
+    overflow: hidden;
+}
+
+/* header section css :end */
+
+/* banner section css :start */
+
+.home-banner {
+    width: 100%;
+    background: url(../img/banner-bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    padding: 180px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+}
+.bO-firstcontainer {
+    display: none;
+}
+
+.first-text {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+.heading {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    border-bottom: 1px solid #d1ab7f;
+    border-top: 1px solid #d1ab7f;
+}
+
+.last-text {
+    color: white;
+}
+
+.button {
+    color: white;
+    background-color: #d1ab7f;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 1px solid #d1ab7f;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+}
+
+/* banner section css :end */
+
+/* below-banner section css :start */
+
+.below-banner {
+    width: 100%;
+    padding: 120px 30px;
+}
+
+.below-banner-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.below-banner-img {
+    display: none;
+}
+
+.below-banner-first-text {
+    color: #d1ab7f;
+    text-transform: uppercase;
+}
+
+.below-banner-second-text {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #222;
+}
+
+.below-banner-para {
+    color: #777;
+    font-weight: 300;
+}
+
+.below-banner-button {
+    color: white;
+    background-color: #d1ab7f;
+    padding: 10px 30px;
+    font-weight: 600;
+    border: 1px solid #d1ab7f;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* below-banner section css :end */
+
+/* category section css :start */
+
+.category {
+    width: 100%;
+    background-color: #f9f9ff;
+    padding: 120px 30px;
+    text-align: center;
+
+}
+
+.category-heading {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 90px 0px;
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.dish {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.dish img {
+    width: 100%;
+    height: 100%;
+}
+
+.dish-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* category section css :end */
+
+/* below category section css :start */
+
+.below-category {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 120px 20px;
+    gap: 100px;
+}
+
+.below-category button {
+    background-color: #222;
+    border: 1px solid #222;
+}
+
+.below-category-img {
+    background: url(../img/video-bg.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* below category section css :end */
+
+/* client's review section :start */
+.client-review {
+    width: 100%;
+    background: url(../img/review-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.client-review-overlay {
+    width: 100%;
+    background-color: rgba(4, 9, 30, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 120px 20px;
+}
+.client-review .text-box {
+    color: white;
+    text-align: center;
+}
+.slider {
+    width: 100%;
+}
+
+.slick-dots li {
+    background-color: rgba(216, 215, 215,0.2);
+    width: 10px;
+    height: 10px;
+}
+.slick-dots {
+    bottom: -60px;
+}
+.slick-dots .slick-active {
+    background-color: #d1ab7f;
+}
+.slick-dots li button:before {
+    color: transparent;
+}
+.slick-dots li.slick-active button:before {
+    color: transparent;
+}
+.slider ul {
+    margin-top: 30px;
+}
+
+.client-box {
+    color: white;
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    margin: 20px 0px;
+}
+.rating {
+    font-size: 14px;
+}
+.client-thought {
+    color: white;
+}
+.desktop-slider {
+    display: none;
+}
+/* client's review section :end */
+
+/* blog section css :start */
+
+.blog-section {
+    width: 100%;
+    background-color: #f9f9ff;
+    padding: 120px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-section .menu {
+    text-align: left;
+}
+
+.blog-img {
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.blog-section .dish-name {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.author {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    color: #222;
+    border-bottom: 0.3px solid #e0dddd;
+}
+
+.about-author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.about-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #777;
+
+}
+
+/* blog section css :end */
+
+/* footer section :start */
+
+footer {
+    width: 100%;
+    background-color: #04091e;
+    color: white;
+    padding: 100px 30px;
+}
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about-section {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0px;
+}
+.about-heading {
+    font-size: 18px;
+    font-weight: 500;
+}
+.about-text {
+    font-weight: 400;
+}
+.input-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+footer input {
+    width: 90%;
+    height: 35px;
+    border: none;
+    padding: 0px 20px;
+}
+footer input:focus {
+    outline: none;
+}
+.arrow {
+    width: 10%;
+    text-align: center;
+    padding: 3px 0px;
+    background-color: #d1ab7f;
+}
+.social {
+    color: #ccc;
+    display: flex;
+    gap: 20px;
+}
+.copyright {
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* footer section :end */
+
+/* about section :start */
+.about-home-banner {
+    width: 100%;
+    background: url(../img/top-banner.jpg) no-repeat center;
+    background-size: cover;
+    
+}
+.about-banner-overlay {
+    width: 100%;
+    height: 100%;
+    padding: 50px 30px;
+    padding-top: 170px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+}
+.title {
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+}
+.link {
+    color: white;
+    font-weight: 300;
+}
+.link i {
+    margin: 0px 10px;
+}
+/* about section :end */
+
+/* menu section :start */
+
+.menu-container {
+    width: 100%;
+    background: url(../img/pattern-bg.jpg);
+    display: flex;
+    padding: 120px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.menu-board {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.menu-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.food-item {
+    color: #222;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: white;
+    padding: 5px 25px;
+}
+.about-dish {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+.about-dish .dish-name {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+.price {
+    width: 100%;
+    padding: 0px 80px;
+    
+}
+.pieces {
+    width: 100%;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    padding: 0px 3px;
+    justify-content: space-between;
+}
+.amount {
+    width: 100%;
+    color: #d1ab7f;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* menu section :end */
+
+/* chef section :start */
+
+.chef-section {
+    padding-bottom: 60px;
+    background-color: white;
+}
+.chef-section .menu {
+    gap: 40px;
+}
+.chef-section .blog-img {
+    height: 600px;
+    position: relative;
+}
+
+
+.chef-img-overlay {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(209, 171, 127, 0.8);
+    font-size: 18px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.chef-name {
+    color: #222;
+    font-size: 19px;
+    font-weight: 600;
+}
+.chef-post {
+    color: #777;
+}
+.about-chef {
+    text-align: center;
+}  
+/* chef section :end */
+.bO-firstrow i:hover {
+    color: #d1ab7f;
+}
+.button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+}
+.below-banner-button:hover {
+    background-color: transparent;
+    color: #d1ab7f;
+    border: 1px solid #d1ab7f ;
+}
+.menu-item:hover .dish {
+    transform: scale(1.1);
+}
+.menu-item:hover .dish-name {
+    color: #d1ab7f;
+}
+.blog-section .menu-item:hover .blog-img img{
+    transform: scale(1.1);
+}
+.social i:hover {
+    color: #d1ab7f;
+}
+.chef-section .menu-item:hover .blog-img img{
+    transform: scale(1);
+}
